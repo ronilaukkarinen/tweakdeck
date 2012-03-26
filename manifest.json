@@ -1,0 +1,40 @@
+{
+  "name" : "TweakDeck",
+  "description" : "__MSG_app_description__",
+  "version" : "1.0",
+  "background_page" : "templates/background.html",
+  "default_locale" : "en_US",
+  "omnibox": { "keyword" : "td" },
+  "homepage_url" : "http://peikko.us/tweetdeck",
+  "icons" : {
+    "16" : "assets/logos/16.png",
+    "24" : "assets/logos/24.png",
+    "32" : "assets/logos/32.png",
+    "48" : "assets/logos/48.png",
+    "128" : "assets/logos/128.png"
+  },
+  "update_url" : "http://downloads.tweetdeck.com/chrome/disable-updates.xml",
+  "app" : {
+    "launch" : {
+      "local_path": "templates/default.html"
+    }
+  },
+  "minimum_chrome_version" : "8",
+  "permissions": [
+    "unlimitedStorage",
+    "tabs",
+    "notifications",
+    "geolocation",
+    "contextMenus",
+    "https://*.twitter.com/",
+    "http://search.twitter.com/",
+    "http://*.tweetdeck.com/",
+    "https://*.tweetdeck.com/",
+    "https://www.googleapis.com/buzz/v1/",
+    "http://api.foursquare.com/",
+    "https://api.foursquare.com/",
+    "https://*.facebook.com/",
+    "https://yfrog.com/",
+    "http://im.twitvid.com/"
+  ]
+}

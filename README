@@ -1,0 +1,28 @@
+Twitter updated Tweetdeck in December 2011 and since then it has been
+lacking most of the best features for power users.
+
+I'm Chrome user and used Tweetdeck forever. But since the update, it's
+totally unusable. I found a copy of the old beta crx file and modified
+it to my needs. Inspired by Android app Tweakdeck, Tweakdeck for
+Chrome was born!
+
+I TAKE NO CREDIT FOR THIS APP, all praise goes to Twitter/Tweetdeck co.
+
+How to install?
+
+1. Ensure you have the latest Chrome dev version installed.
+
+For Windows:
+https://www.google.com/chrome/eula.html?extra=devchannel&platform=win
+
+For Mac:
+http://www.google.com/chrome/intl/en/eula_dev.html?dl=mac
+
+For Linux:
+http://www.chromium.org/getting-involved/dev-channel
+
+2. Uninstall official Tweetdeck.
+3. Right click tweakdeck.crx and save it to your computer.
+4. Locate file, drag and drop tweakdeck.crx to Chrome window (title bar to be sure) and install.
+
+(remember to follow @rolle in www.twitter.com)

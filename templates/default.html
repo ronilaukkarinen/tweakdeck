@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <link rel="stylesheet" href="/css/chrome.css" />
+    <meta charset="UTF-8">
+    <title>TweakDeck</title>
+    <meta name="application-name" content="TweakDeck"/>
+    <meta name="description" content="__MSG_app_description__"/>
+    <link rel="shortcut icon" href="http://peikko.us/tweakdeck.ico">
+</head>
+<body>
+
+<audio style="display:none" preload="auto" id="updateSound" autobuffer>
+    <source src="/assets/sounds/tweet.mp3" type="audio/mp3" />
+</audio>
+
+<header class="header-app">
+    <h1><a href="#" rel="sidePanel" title="TweakDeck">TweakDeck</a></h1>
+    <div id="statusDisplay"><div id="statusSpinner"></div><div id="statusDetail"></div></div>
+    <div id="composeEntry" class="">
+        <div id="composeAltText" class="composeInputHeader" contenteditable="false"></div>
+    </div>
+    <div id="tdStatus" class="acc-status"></div>
+</header>
+
+<div id="overlay"></div>
+
+<!-- COMPOSE -->
+<section id="compose">
+<textarea id="hiddenTextarea" style="display:absolute; top:-100px; height:1px;"></textarea>
+<div id="composePanel" class="panel-shadow ">
+ <div class="composeBoxPanel">
+    <div id="composeBox" class="composeInputLarge">
+        <div id="composeInput" class="textInputElem" contenteditable="true"></div>
+
+            <div class="panel-buttonbar-sml" >
+                <div class="panel-buttonbar-comp">
+                    <a href="#" class="button-icon-label button-xsml button-inv i-addphoto" rel="addPhoto" data-i18n="1"><span></span>__MSG_add_media__</a>
+                </div>
+                <span>
+                    <a href="#" id="addLocationButton" class="button-icon-label button-xsml button-inv i-addlocation ellipsis" rel="addLocation" data-i18n="1"><span></span>__MSG_add_your_location__</a>
+                    <a href="#" rel="removeLocation" class="removeLocationButton"><span>X</span></a>
+                </span>
+                <span class="fr">
+                    <a href="http://www.TweakDeck.com/deckly" id="dispDeckly" target="blank" class="button-icon button-xsml button-inv i-setdecklyon showTip" rel="setDeckly" title="__MSG_decklyindicator_tooltip__" data-i18n="1"><span></span></a>
+                    <span id="characterCount" class="charCount"></span>
+                    <a href="#" id="dispDecklyOn" class="hide button-icon-label button-xsml button-inv i-setdeckly deckly-count showTip" rel="setDecklyOn" title="__MSG_decklyindicator_tooltip_leave__" data-i18n="1"><span></span>__MSG_deckly_long__</a>
+                    <a href="#" id="clearCompose" class="compClear" rel="clear">&nbsp;</a>
+                </span>
+
+            </div>
+
+        <input id="fileUploadInput" style="opacity: 0; position: absolute; right: -9000px" size="0" type="file" multiple/>
+        <input type="hidden" id="statusID" />
+        <input type="hidden" id="replyToScreenName" />
+        <input type="hidden" id="originalText" />
+        <input type="hidden" id="twitterPlaceID" />
+
+    </div>
+    <!-- results -->
+    <div id="composeResults" class="list-holder">
+    </div>
+
+    <div class="controlBarSlim">
+        <span id="composeInfo" class="composeInfoTxt" data-i18n="1">__MSG_posting_label__</span>
+    </div>
+
+    <div class="accounts" >
+        <ul id="postingAccounts" class="accountList clear"></ul>
+    </div>
+    <div id="hiddenAccountsHolder" class="accounts hide insetPanelDark ">
+        <ul id="hiddenAccounts" class="accountList clear"></ul>
+    </div>
+
+    <div id="composeControls" class="panel-buttonbar panel-skin-grad clear">
+        <a href="#" id="cmpMessageButton" class="button-icon-label button-norm i-adddm" rel="addDM" data-i18n="1"><span></span>__MSG_start_ac_message__</a>
+        <span class="fr">
+            <a href="#" id="cmpCancelButton" class="button-label button-cancel" rel="cancelRT" data-i18n="1">__MSG_cancel__</a>
+            <a href="#" id="cmpSendButton" class="button-label button-go" rel="send" data-i18n="1"><strong>__MSG_send__</strong></a>
+        </span>
+    </div>
+   </div>
+</div>
+
+</section>
+<!-- /COMPOSE -->
+
+<div id="container">
+    <div class="scroll-pane">
+        <div id="columns" class="scroll-content">
+
+        </div>
+    </div>
+
+</div>
+
+<aside>
+    <div class="panel-aside">
+        <div id="asideDetail" class="panel-page panel-detail">
+            <div class="disp-table">
+                <div class="disp-cell">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+        <div id="profile" class="panel-page"></div>
+        <div id="accounts" class="panel-page"></div>
+    </div>
+</aside>
+
+<div id="lightbox">
+    <div id="outerContainer" >
+        <div id="contentContainer">&nbsp;</div>
+    </div>
+</div>
+
+<div id="infoWindow">
+    <div class="disp-table">
+        <div class="disp-cell">
+            <div class="infoContent"></div>
+        </div>
+    </div>
+</div>
+
+<div id="startupModal">
+    <div class="startup-table">
+        <div class="startup-cell">
+            <div class="startup-content"></div>
+        </div>
+    </div>
+</div>
+
+<div id="popOver">
+    <div class="popHolder"><div id="popContents"></div></div>
+</div>
+
+<footer></footer>
+    <script src="../scripts/default.js"></script>
+    <!--
+    Beginning scripts for web client
+    {% WEB_SCRIPTS %}
+    Beginning scripts for web client
+    -->
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+        TD.util.i18n.localiseTags();
+
+        // TD namespace created in main.js
+        TD.storage.store.init(localStorage);
+        TD.controller.clients.initialiseClients();
+        TD.controller.feedManager.init();
+        TD.controller.scheduler.initialiseColumns();
+        TD.controller.notifications.init();
+
+        TD.ui.columns.loadColumns(function() { TD.ui.columns.resize(); });
+        TD.ui.main.init();
+        TD.ui.compose.init();
+
+        TD.sync.controller.init();
+        setTimeout(TD.controller.harmonizer.start, 10000);
+
+        if (TD.storage.store.get('debug') === true) {
+            $('#debug_button').show();
+        } else {
+            $('#debug_button').hide();
+        }
+
+        // Tracking!
+        TD.controller.stats.init();
+        TD.controller.stats.appOpen();
+
+        // Call home every 15 minutes
+        setInterval(function () {
+            TD.controller.stats.ping();
+        }, 9e5);
+
+        TD.ready = true;
+    });
+    </script>
+
+    <!-- Facebook Connect req Node -->
+    <div id="fb-root">&nbsp;</div>
+
+    <!-- The image we use for tracking pings-->
+    <img id="tracking_image" width="0" height="0" />
+
+</body>
+</html>
