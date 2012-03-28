@@ -22,7 +22,7 @@ For Linux:
 http://www.chromium.org/getting-involved/dev-channel
 
 2. Uninstall official Tweetdeck.
-3. Right click tweakdeck.crx and save it to your computer.
-4. Locate file, drag and drop tweakdeck.crx to Chrome window (title bar to be sure) and install.
+3. Download this git repo.
+4. Locate tweatdeck.crx file, drag and drop tweakdeck.crx to Chrome window (title bar to be sure) and install.
 
 (remember to follow: www.twitter.com/rolle)
