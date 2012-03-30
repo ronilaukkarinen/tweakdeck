@@ -10,19 +10,10 @@ I TAKE NO CREDIT FOR THIS APP, all praise goes to Twitter/Tweetdeck co.
 
 How to install?
 
-1. Ensure you have the latest Chrome dev version installed.
-
-For Windows:
-https://www.google.com/chrome/eula.html?extra=devchannel&platform=win
-
-For Mac:
-http://www.google.com/chrome/intl/en/eula_dev.html?dl=mac
-
-For Linux:
-http://www.chromium.org/getting-involved/dev-channel
-
+1. Install Chrome if you don't have it already (stable preferred, dev does not always work)
 2. Uninstall official Tweetdeck.
 3. Download this git repo.
-4. Locate tweatdeck.crx file, drag and drop tweakdeck.crx to Chrome window (title bar to be sure) and install.
+4. Locate tweatdeck.crx file, drag and drop tweakdeck.crx to Chrome window (title bar to be sure), or go to Extensions > Install, and install.
+5. Have fun!
 
 (remember to follow: www.twitter.com/rolle)
