@@ -1,6 +1,8 @@
 TweakDeck
 =========================
 
+Google Chrome extension for Twitter, Facebook and Foursquare, developed further from the old Tweetdeck. Supports many things that the official one does not. Add endless amount of Twitter-accounts and Facebook-pages, like, reply and favorite straight from the app, etc...
+
 Background story
 --------------
 
@@ -11,7 +13,7 @@ I'm Chrome user and used Tweetdeck since forever. But since the update, it's tot
 On other platforms
 --------------
 
-Similar app can be installed on Android (not by me). It is also developed further from abandoned Tweetdeck. [Google Play link](https://play.google.com/store/apps/details?id=com.modaco.thedeck.android.app&hl=en)
+Similar app can be installed on Android (not by me). It is also developed further from abandoned Tweetdeck. [Google Play link](https://play.google.com/store/apps/details?id=com.modaco.thedeck.android.app&hl=en).
 
 Please note
 --------------
