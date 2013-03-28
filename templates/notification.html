@@ -6,15 +6,17 @@
         <style type="text/css">
             #message {height:103px;}
         </style>
-    </head>
-    <body onload="init()" onmouseover="handleMouseOver()" onmouseout="handleMouseOut()">
+        <script src="../scripts/onload.js"></script>
 
-        <div id="message" onclick="handleMessageClick(event)">
+    </head>
+    <body>
+
+        <div id="message">
         </div>
         <div class="panel-notification-controls">
-                <a href="#" id="columnTitle" rel="showColumn" onclick="handleMessageClick(event)"></a>
-                <a href="#" id="pagePrev" onclick="cycle(-1)"></a>
-                <a href="#" id="pageNext" onclick="cycle(1)"><span id="pageValTxt">next</span></a>
+                <a href="#" id="columnTitle" rel="showColumn"></a>
+                <a href="#" id="pagePrev"></a>
+                <a href="#" id="pageNext"><span id="pageValTxt">next</span></a>
         </div>
     </body>
     <script src="../scripts/notificationupdateviewer.js"></script>

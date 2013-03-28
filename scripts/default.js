@@ -7983,7 +7983,7 @@ TD.controller.notifications = function () {
     a.init = function () {
         r = o && p.checkPermission() == 0;
         if (o) {
-            b = new SharedWorker("../scripts/notification.js");
+            b = new SharedWorker("/scripts/notification.js");
             b.port.addEventListener("message", function (x) {
                 if (x.data === "ready") {
                     d = true;
