@@ -1,1 +1,1 @@
-$(function() { $("#tweakdeckversion").load("/VERSION"); });
+$(function() { $("#tweakdeckversion").load("../VERSION"); });
