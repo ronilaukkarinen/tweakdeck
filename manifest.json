@@ -1,9 +1,7 @@
 {
   "name" : "TweakDeck",
   "description" : "__MSG_app_description__",
-  "version" : "1.0.5",
-  "manifest_version" : 2,
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "version" : "1.0",
   "background_page" : "templates/background.html",
   "default_locale" : "en_US",
   "omnibox": { "keyword" : "td" },
