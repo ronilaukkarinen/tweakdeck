@@ -1,4 +1,9 @@
-    $(document).ready(function() {
+$(function() { 
+	$("#tweakdeckversion").load("../VERSION");
+
+//    Beginning scripts for web client
+//    Beginning scripts for web client
+
         TD.util.i18n.localiseTags();
 
         // TD namespace created in main.js
@@ -31,4 +36,5 @@
         }, 9e5);
 
         TD.ready = true;
-    });
+
+	 });
