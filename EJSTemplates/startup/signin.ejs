@@ -1,1 +1,85 @@
-<div id="startupForm" data-menutype="startup"> <img src="/assets/logo.png" alt="TweakDeck"/> <div class="step1 startflow"> <ul class="panel-startflow"> <li><a href="#" rel="skipImport" class="button-startflow"> Welcome to TweakDeck!<br> <span>Use Chromedeck the old fashioned way.</span> </a></div></li> <li><a href="#" rel="skipImport" class="button-startflow"> __MSG_sign_in_with_td__<br /> <span>__MSG_register_free_blurb__</span> </a></li> <li><a href="#" rel="skip" class="button-startflow">__MSG_get_started_blurb__</a></li> </ul> <div> <a href="https://twitter.com/tos" rel="url" class="extUrlLink">__MSG_terms_of_service__</a> &nbsp;&nbsp; <a href="https://twitter.com/privacy" rel="url" class="extUrlLink">__MSG_privacy_policy__</a> </div> </div> <div class="hide step2 startflow"> <div id="tdAccountForm" class="form form-startup clear"> <%= TD.ui.template.render("startup/td_account_form", {"isNewUser" : false, "isStartFlow" : true}) %> </div> <div class="panel-buttonbar-form"> <a href="#" class="button-icon-label button-minimal fl i-back" rel="state1"><span></span>__MSG_back_btn_label__</a> </div> </div> <div class="hide step3 startflow"> <div id="tdAccountFormRegister" class="form form-startup clear"> <%= TD.ui.template.render("startup/td_account_form", {"isNewUser" : true, "isStartFlow" : true}) %> </div> <div class="panel-buttonbar-form"> <a href="#" class="button-icon-label button-minimal fl i-back" rel="state2"><span></span>__MSG_back_btn_label__</a> </div> </div> <div class="hide step4 startflow"> </div> </div>
+<div id="startupForm" data-menutype="startup">
+  
+  <img src="/assets/logo.png" alt="TweakDeck"/>
+  
+  <div class="step1">
+    
+    <ul class="panel-startflow">
+      
+      <li>
+        <a href="#" class="button-startflow">Welcome to TweakDeck!<br />
+          
+          <span>Use Chromedeck the old fashioned way.</span>
+          
+        </a>
+  </li>
+  
+  <li>
+    <a href="#" rel="skip" class="button-startflow">
+      __MSG_get_started_blurb__
+    </a>
+  </li>
+  
+</ul>
+
+      </div>
+
+<div>
+  
+  <a href="https://twitter.com/tos" rel="url" class="extUrlLink">
+    __MSG_terms_of_service__
+  </a>
+  &nbsp;&nbsp; 
+  <a href="https://twitter.com/privacy" rel="url" class="extUrlLink">
+    __MSG_privacy_policy__
+  </a>
+  
+</div>
+
+</div>
+
+<div class="hide step2 startflow">
+  
+  <div id="tdAccountForm" class="form form-startup clear">
+    
+    <%= TD.ui.template.render("startup/td_account_form", {"isNewUser" : false, "isStartFlow" : true}) %>
+      
+    </div>
+    
+    <div class="panel-buttonbar-form">
+      
+      <a href="#" class="button-icon-label button-minimal fl i-back" rel="state1">
+        <span>
+        </span>
+        __MSG_back_btn_label__
+      </a>
+      
+    </div>
+    
+  </div>
+  
+  <div class="hide step3 startflow">
+    
+    <div id="tdAccountFormRegister" class="form form-startup clear">
+      
+      <%= TD.ui.template.render("startup/td_account_form", {"isNewUser" : true, "isStartFlow" : true}) %>
+        
+      </div>
+      
+      <div class="panel-buttonbar-form">
+        
+        <a href="#" class="button-icon-label button-minimal fl i-back" rel="state2">
+          <span>
+          </span>
+          __MSG_back_btn_label__
+        </a>
+        
+      </div>
+      
+    </div>
+    
+    <div class="hide step4 startflow">
+      
+    </div>
+    
+  </div>
