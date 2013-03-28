@@ -3,6 +3,15 @@ TweakDeck
 
 Google Chrome extension for Twitter, Facebook and Foursquare, developed further from the old Tweetdeck. Supports many things that the official one does not. Add endless amount of Twitter-accounts and Facebook-pages, like, reply and favorite straight from the app, etc...
 
+Note first!
+--------------
+
+In March 2013 or so Twitter removed their old bridge so this Tweetdeck version is no longer able to login. I continued developing the extension and noticed [ManifestVersion](https://developer.chrome.com/extensions/manifestVersion.html) has been updated from 1 to 2 during these couple of years. This means that all inline script, evals and many other things are completely banned. I started rewritting the code, but it's too much work for one man, so I was forced to revert back.
+
+Most of the code is obfuscated or deprecated and hard to debug and I'm not that experienced developer so figuring things out is quite time consuming. You can still use the [old version](https://github.com/ronilaukkarinen/tweakdeck/tree/8b3cb45dc7ffb903292d98c27ddb5ce89379c0e6) 1.0.3 from 2012, it mostly works using without signing in (guest mode).
+
+I have so much love for this extension and it will be a sad day to see it go. After 2013 Google Chrome will no longer accept this, If I don't do something.
+
 Background story
 --------------
 
