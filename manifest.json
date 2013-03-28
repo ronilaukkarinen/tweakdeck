@@ -1,9 +1,9 @@
 {
   "name" : "TweakDeck",
   "description" : "__MSG_app_description__",
-  "version" : "1.1",
+  "version" : "1.2",
   "manifest_version" : 2,
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://graph.facebook.com; https://foursquare.com; object-src 'self'",
   "background_page" : "templates/background.html",
   "default_locale" : "en_US",
   "omnibox": { "keyword" : "td" },
