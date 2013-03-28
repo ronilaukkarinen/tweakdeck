@@ -1,7 +1,8 @@
 {
   "name" : "TweakDeck",
   "description" : "__MSG_app_description__",
-  "version" : "1.0",
+  "version" : "1.0.4",
+  "manifest_version" : 2,
   "background_page" : "templates/background.html",
   "default_locale" : "en_US",
   "omnibox": { "keyword" : "td" },
