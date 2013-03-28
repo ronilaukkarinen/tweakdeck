@@ -28,7 +28,7 @@ How to install?
 - Install Chrome if you don't have it already (stable preferred, dev does not always work)
 - Uninstall official Tweetdeck if you have it installed (you can always use [the official one](http://web.tweetdeck.com))
 - Download this git repo by clicking ZIP button in the top of this page
-- Locate tweatdeck.crx file, go to menu > Settings > Extensions (or type chrome://chrome/extensions/ to address bar), drag and drop tweakdeck.crx to Chrome window.
+- Locate tweatdeck.crx file, go to menu > Settings > Extensions (or type chrome://chrome/extensions/ to address bar), drag and drop tweakdeck.crx to Chrome window (this can take few seconds since this is a large sized extension)
 - Have fun!
 
 (remember to follow: www.twitter.com/rolle)
