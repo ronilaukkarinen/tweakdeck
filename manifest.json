@@ -1,9 +1,10 @@
 {
   "name" : "TweakDeck",
   "description" : "__MSG_app_description__",
-  "version" : "1.2",
+  "version" : "1.3.2",
   "manifest_version" : 2,
-  "content_security_policy": "script-src 'self' 'unsafe-eval' https://graph.facebook.com; https://foursquare.com; object-src 'self'",
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://*.twitter.com https://*.twimg.com https://ssl.google-analytics.com https://graph.facebook.com https://api-read.facebook.com https://api-ssl.bitly.com; object-src 'self' https://www.youtube.com",
+   "permissions": [ "unlimitedStorage", "tabs", "notifications", "geolocation", "contextMenus", "https://*.twitter.com/", "http://*.tweetdeck.com/", "https://*.tweetdeck.com/", "https://*.facebook.com/" ],
   "background_page" : "templates/background.html",
   "default_locale" : "en_US",
   "omnibox": { "keyword" : "td" },
