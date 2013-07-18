@@ -1,3 +1,6 @@
+This extension is RETIRED. It WILL NO LONGER WORK. Please see [Tweetdeck Classic](https://github.com/ronilaukkarinen/tweetdeck-classic).
+=========================
+
 TweakDeck
 =========================
 
